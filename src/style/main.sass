@@ -8,6 +8,7 @@
     color: #fff
     box-sizing: border-box
     
+    
 ::-webkit-scrollbar
     width: 10px
     
@@ -26,7 +27,11 @@
     background: variables.$bg
     width: 100%
     min-height: 101vh
-     
+    padding-bottom: 5vh
+    background-position: center
+
+h1,p,h2,img,a
+    animation: fadeIn 1s ease
 
 .card
     @include mixins.Card
@@ -54,7 +59,7 @@
 .card-laranja 
     @include mixins.CardLaranja
     @include mixins.FlexColumn
-    width: 58%
+    width: fit-content
     height: 40vh
     padding: 25px
     flex: 1
@@ -71,7 +76,7 @@
         font-weight: 900
         font-style: italic
         font-size: 4.5rem
-        @media(max-width: 1330px)
+        @media(max-width: 1360px)
             font-size: 3rem
         @media(max-width: 990px)
             font-size: 2rem
@@ -81,7 +86,7 @@
         font-weight: 800
         font-size: 3rem
         letter-spacing: 0.08rem
-        @media(max-width: 1330px)
+        @media(max-width: 1360px)
             font-size: 2.5rem
         @media(max-width: 990px)
             font-size: 1.5rem
@@ -101,11 +106,13 @@
     @include mixins.FlexRow
     width: 33%
     height: 20vh
-    animation: fadeIn 2s ease
+    animation: fadeIn 1s ease
     transition: .3s ease-in-out
     &:hover
         scale: 105%
         cursor: pointer
+        text-decoration: underline
+
     img
         height: 60%
         aspect-ratio: 1/1
@@ -121,23 +128,72 @@
 
         &:hover
             text-shadow: 0 0 2px #fff
-            text-decoration: underline
-
+            
     @media(max-width: 1250px)
         img     
             height: 50%
         a
             font-size: 24px
+    @media(max-width: 1000px)
+        img     
+            height: 40%
+        a
+            font-size: 20px
 
 #bio
     @include mixins.Card
     width: 100%
     height: 30vh
-    animation: fadeIn 3s ease
+    animation: fadeIn 1.5s ease
+    align-items: flex-start
+    justify-content: flex-start
+    gap: 2vh
+    padding: 40px
+    h2
+        font-size: 32px
+        font-weight: 800
+        &:after
+            content: ""
+            background: variables.$insta-gradient
+            height: 4px
+            width: 50px
+    p
+        width: 90%
+        font-size: 24px
+
+#insta
+    background: variables.$insta-gradient
+    &:hover
+        box-shadow: variables.$insta-sombra
+
+#discord
+    background: variables.$discord-gradient
+    &:hover
+        box-shadow: variables.$discord-sombra
+
+#github
+    background: variables.$github-gradient
+    &:hover
+        box-shadow: variables.$github-sombra
+
+#titulo-linguagens
+    @include mixins.CardLaranja
+    @include mixins.FlexRow
+    animation: fadeIn 1.5s ease
+    width: 100%
+    height: 10vh
+    h1
+        color: variables.$cor-azul
+        font-size: 52px
+        font-weight: 900
 
 @media(max-width: 728px)
+    #titulo-linguagens
+        h1
+            font-size: 40px
     .container
         width: 90%
+        gap: 1vh
         
     #profile, #midia
         @include mixins.FlexColumn
@@ -151,18 +207,13 @@
     #pfp
         height: auto
         width: 100%
+
     .card-midia
         width: 100%
         img     
             height: 60%
         a
             font-size: 35px
-
-#insta
-    background: variables.$insta-gradient
-    &:hover
-        box-shadow: variables.$insta-sombra
-
 
 @keyframes fadeIn
     from
