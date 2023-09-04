@@ -52,7 +52,7 @@ function App() {
           </div>
 
           <div className="container" id="bio">
-              <h2>Olá, eu sou o augusto 👋 </h2>
+              <h2>Olá, eu sou o Augusto 👋 </h2>
               <p>Descobri minha paixão em design e programação web ainda novo. Posso não ser o melhor no que faço, mas me orgulho dos meus designs e sites, foco sempre em fazê-los com meu maior carinho!</p>
           </div>
 
