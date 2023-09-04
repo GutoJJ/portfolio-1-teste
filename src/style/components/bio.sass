@@ -1,0 +1,27 @@
+@use '../variables'
+@use '../mixins'
+
+#bio
+    @include mixins.Card
+    width: 100%
+    height: fit-content
+    animation: fadeIn 1.5s ease
+    transition: .5s ease
+    align-items: flex-start
+    justify-content: flex-start
+    gap: 2vh
+    padding: 40px
+    h2
+        font-size: 32px
+        font-weight: 800
+        span
+            text-decoration: underline
+            text-decoration-color: variables.$cor-laranja
+    p
+        width: 90%
+        font-size: 24px
+        @media(max-width: 728px)
+            width: 100%
+            font-size: 20px
+            line-height: 135%
+            letter-spacing: 0.01rem

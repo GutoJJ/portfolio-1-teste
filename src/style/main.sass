@@ -29,13 +29,6 @@
     padding-bottom: 5vh
     background-position: center
 
-#pfp
-    height: 40vh
-    aspect-ratio: 4/4
-    background-image: url("../img/pfp.png")
-    background-position: center 10%
-    background-size: cover
-
 h1,p,h2,img,a
     animation: fadeIn 1s ease
 
@@ -51,88 +44,8 @@ h1,p,h2,img,a
 
 .row
     @include mixins.FlexRow
-    gap: 3vw
-
-
-
-.card-midia
-    @include mixins.Card
-    @include mixins.FlexRow
-    width: 33%
-    height: 20vh
-    animation: fadeIn 1s ease
-    transition: .3s ease-in-out
-    &:hover
-        scale: 105%
-        cursor: pointer
-        text-decoration: underline
-
-    img
-        height: 60%
-        aspect-ratio: 1/1
-        margin-left: 1vw
-
-    a
-        font-size: 32px
-        font-weight: 800
-        font-style: italic
-        text-decoration: none
-        margin-left: 0
-        transition: .2s
-
-        &:hover
-            text-shadow: 0 0 2px #fff
-
-    @media(max-width: 1250px)
-        img
-            height: 50%
-        a
-            font-size: 24px
-    @media(max-width: 1000px)
-        img
-            height: 40%
-        a
-            font-size: 20px
-
-#bio
-    @include mixins.Card
     width: 100%
-    height: fit-content
-    animation: fadeIn 1.5s ease
-    transition: .5s ease
-    align-items: flex-start
-    justify-content: flex-start
-    gap: 2vh
-    padding: 40px
-    h2
-        font-size: 32px
-        font-weight: 800
-        span
-            text-decoration: underline
-            text-decoration-color: variables.$cor-laranja
-    p
-        width: 90%
-        font-size: 24px
-        @media(max-width: 728px)
-            width: 100%
-            font-size: 20px
-            line-height: 135%
-            letter-spacing: 0.01rem
-
-#insta
-    background: variables.$insta-gradient
-    &:hover
-        box-shadow: variables.$insta-sombra
-
-#discord
-    background: variables.$discord-gradient
-    &:hover
-        box-shadow: variables.$discord-sombra
-
-#github
-    background: variables.$github-gradient
-    &:hover
-        box-shadow: variables.$github-sombra
+    gap: 3vw
 
 #titulo-linguagens
     @include mixins.CardLaranja
@@ -142,8 +55,28 @@ h1,p,h2,img,a
     height: 10vh
     h1
         color: variables.$cor-azul
-        font-size: 52px
+        font-size: 48px
         font-weight: 900
+
+#grid-container
+    width: 100%
+    transition: fadeIn 1s ease
+    .grid
+        @include mixins.Grid
+        justify-content: center
+        align-items: center
+        row-gap: 5vh
+        column-gap: 1vw
+        .card
+            @include mixins.FlexColumn
+            width: 100%
+            height: 30vh
+            aspect-ratio: 1/1
+            transition: .3s ease-in-out
+            &:hover
+                scale: 105%
+
+// RESPONSIVIDADE =================================================================
 
 @media(max-width: 728px)
     #titulo-linguagens
@@ -177,6 +110,8 @@ h1,p,h2,img,a
             margin-left: 15px
             flex: 1
             font-size: 35px
+
+// KEYFRAMES =================================================================
 
 @keyframes slideIn
     from

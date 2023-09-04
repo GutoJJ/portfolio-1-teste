@@ -1,0 +1,56 @@
+@use '../variables'
+@use '../mixins'
+
+.card-midia
+    @include mixins.Card
+    @include mixins.FlexRow
+    width: 33%
+    height: 20vh
+    animation: fadeIn 1s ease
+    transition: .3s ease-in-out
+    &:hover
+        scale: 105%
+        cursor: pointer
+        text-decoration: underline
+
+    img
+        height: 60%
+        aspect-ratio: 1/1
+        margin-left: 1vw
+
+    a
+        font-size: 32px
+        font-weight: 800
+        font-style: italic
+        text-decoration: none
+        margin-left: 0
+        transition: .2s
+
+        &:hover
+            text-shadow: 0 0 2px #fff
+
+    @media(max-width: 1250px)
+        img
+            height: 50%
+        a
+            font-size: 24px
+    @media(max-width: 1000px)
+        img
+            height: 40%
+        a
+            font-size: 20px
+
+#insta
+    background: variables.$insta-gradient
+    &:hover
+        box-shadow: variables.$insta-sombra
+
+#discord
+    background: variables.$discord-gradient
+    &:hover
+        box-shadow: variables.$discord-sombra
+
+#github
+    background: variables.$github-gradient
+    &:hover
+        box-shadow: variables.$github-sombra
