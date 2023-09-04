@@ -1,0 +1,50 @@
+@use '../variables'
+@use '../mixins'
+
+#profile
+    animation: fadeIn .5s ease
+
+
+
+.card-laranja
+    @include mixins.CardLaranja
+    @include mixins.FlexColumn
+    width: fit-content
+    height: 40vh
+    padding: 25px
+    flex: 1
+    align-items: flex-start
+    .row
+        justify-content: flex-start
+        gap: 15px
+        width: fit-content
+        padding-bottom: 5px
+
+    h1
+        color: variables.$cor-azul
+        letter-spacing: 0.09rem
+        font-weight: 900
+        font-style: italic
+        font-size: 4.5rem
+        @media(max-width: 1360px)
+            font-size: 3rem
+        @media(max-width: 990px)
+            font-size: 2rem
+
+    h2
+        color: variables.$cor-azul
+        font-weight: 800
+        font-size: 3rem
+        letter-spacing: 0.08rem
+        @media(max-width: 1360px)
+            font-size: 2.5rem
+        @media(max-width: 990px)
+            font-size: 1.5rem
+
+    img
+        @media(max-width: 1330px)
+            width: 50px
+            aspect-ratio: 1/1
+
+#borda-baixo
+    border-bottom: 4px variables.$cor-azul solid

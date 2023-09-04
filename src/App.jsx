@@ -5,6 +5,8 @@ import instagram from './img/insta.png';
 import discord from './img/discord.png';
 import github from './img/GitHub.png';
 
+import Perfil from './components/perfil.jsx'
+
 function App() {
 
   return (
@@ -14,25 +16,7 @@ function App() {
 
         <div className="container" id='wrapper'>
 
-          <div className="row" id="profile">
-            <div className="card" id="pfp"></div>
-
-            <div className="card-laranja" id="name-container">
-              <div className="row" id="borda-baixo">
-                <img src={id_img} alt="" />
-                <h1>AUGUSTO JUNG</h1>
-              </div>
-              <div className="row">
-                <img src={cake_img} alt="" />
-                <h2>18 y.o</h2>
-              </div>
-              <div className="row">
-                <img src={CSS_img} alt="" />
-                <h2>Front-End Developer</h2>
-              </div>
-            </div>
-
-          </div>
+          <Perfil />
 
           <div className="row" id="midia">
             
@@ -52,8 +36,8 @@ function App() {
           </div>
 
           <div className="container" id="bio">
-              <h2>Olá, eu sou o Augusto 👋 </h2>
-              <p>Descobri minha paixão em design e programação web ainda novo. Posso não ser o melhor no que faço, mas me orgulho dos meus designs e sites, foco sempre em fazê-los com meu maior carinho!</p>
+              <h2>Olá, eu sou o <span>Augusto</span> 👋</h2>
+              <p>Descobri minha paixão em design e desenvolvimento web ainda novo. Posso não ser o melhor no que faço, mas me orgulho dos meus sites e designs, foco sempre em fazê-los com meu maior carinho!</p>
           </div>
 
           <div id='titulo-linguagens'>
