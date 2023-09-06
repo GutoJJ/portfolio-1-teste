@@ -1,0 +1,15 @@
+@use '../variables'
+@use '../mixins'
+
+#tecnologias
+    @include mixins.FlexRow
+    .card 
+        @include mixins.Card
+        width: 90%
+        height: 25vh
+        transition: .3s ease-in-out
+        &:hover
+            scale: 105%
+
+#wrapperTech
+    width: 100%

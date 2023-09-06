@@ -1,0 +1,37 @@
+@use '../variables'
+@use '../mixins'
+
+nav
+    @include mixins.FlexRow
+    padding-left: 15px
+    height: 50px
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1000
+    background: #252c34b3
+    backdrop-filter: blur(55px)
+    animation: none
+    h1
+        line-height: 50px
+        font-size: 32px
+        font-weight: 800
+        font-style: italic
+        text-decoration: underline
+        text-decoration-color: variables.$cor-laranja
+        text-decoration-thickness: 5px
+        animation: none
+    .text
+        @include mixins.FlexRow
+        align-items: center
+        justify-content: center
+        flex: 1
+        gap: 7vw
+        padding-right: 15px
+        animation: none
+        a
+            font-size: 20px
+            font-weight: 600
+            text-decoration: none
+            width: fit-content

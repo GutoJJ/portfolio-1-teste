@@ -10,15 +10,15 @@ function midia() {
 
             < a href="https://www.instagram.com/guto.jung/" className="card-midia" id="insta">
                 <img src={instagram} alt="" />
-                <a href="https://www.instagram.com/guto.jung/">@guto.jung</a>
+                <h2 >@guto.jung</h2>
             </a>
             <a href='/' className="card-midia" id='discord'>
                 <img src={discord} alt="" />
-                <a href="">.naydrus</a>
+                <h2>.naydrus</h2>
             </a>
             <a href='https://github.com/GutoJJ' className="card-midia" id='github'>
                 <img src={github} alt="" />
-                <a href="https://github.com/GutoJJ">GutoJJ</a>
+                <h2 >GutoJJ</h2>
             </a>
 
         </div>

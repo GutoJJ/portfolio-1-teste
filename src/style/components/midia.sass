@@ -6,8 +6,9 @@
     @include mixins.FlexRow
     width: 33%
     height: 20vh
-    animation: fadeIn 1s ease
+    animation: fadeIn 1.5s ease
     transition: .3s ease-in-out
+    text-decoration: none
     &:hover
         scale: 105%
         cursor: pointer
@@ -17,8 +18,9 @@
         height: 60%
         aspect-ratio: 1/1
         margin-left: 1vw
+        object-fit: cover
 
-    a
+    h2
         font-size: 32px
         font-weight: 800
         font-style: italic
@@ -32,12 +34,12 @@
     @media(max-width: 1250px)
         img
             height: 50%
-        a
+        h2
             font-size: 24px
     @media(max-width: 1000px)
         img
             height: 40%
-        a
+        h2
             font-size: 20px
 
 #insta

@@ -1,34 +1,28 @@
 import Perfil from './components/perfil.jsx'
 import Media from './components/midia.jsx'
 import Bio from './components/bio.jsx'
+import Navbar from './components/navbar.jsx'
+import Tecnologias from './components/tecnologias.jsx'
+
+import "intersection-observer";
 
 function App() {
 
   return (
     <>
       <div className="app">
-
+      <Navbar />
 
         <div className="container" id='wrapper'>
+          
           <Perfil />
           <Bio />
           <Media />
+          
           <div id='titulo-linguagens'>
-              <h1>- Linguagens -</h1>
+            <h1>- Tecnologias -</h1>
           </div>
-
-          <div id='grid-container'>
-            <div className="grid">
-              <div className="card"></div>
-              <div className="card"></div>
-              <div className="card"></div>
-              <div className="card"></div>
-              <div className="card"></div>
-            </div>
-            
-            
-          </div>
-
+          <Tecnologias />
         </div>
 
       </div>
