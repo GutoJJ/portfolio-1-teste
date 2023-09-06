@@ -1,7 +1,5 @@
 import '../style/components/tecnologias.sass'
 
-import { Fade } from "react-awesome-reveal";
-
 function tecnologias() {
     return (
         <div className="container" id="wrapperTech">

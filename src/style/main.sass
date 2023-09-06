@@ -4,7 +4,7 @@
 *
     margin: 0
     padding: 0
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat',sans-serif !important
     color: #fff
     box-sizing: border-box
     scroll-behavior: smooth
@@ -116,3 +116,11 @@ h1,p,h2,img,a
     to
         opacity: 1
         transform: translateX(0)
+
+@keyframes fadeOut
+    from
+        opacity: 1
+        transform: translateX(0)
+    to
+        opacity: 0
+        transform: translateX(-1vw)

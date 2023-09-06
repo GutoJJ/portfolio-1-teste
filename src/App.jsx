@@ -22,7 +22,9 @@ function App() {
           <div id='titulo-linguagens'>
             <h1>- Tecnologias -</h1>
           </div>
+
           <Tecnologias />
+          
         </div>
 
       </div>

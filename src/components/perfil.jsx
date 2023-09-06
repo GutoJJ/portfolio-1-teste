@@ -16,7 +16,7 @@ const perfil = () => {
                 </div>
                 <div className="row">
                     <img src={cake_img} alt="" />
-                    <h2>18 y.o</h2>
+                    <h2>18 anos</h2>
                 </div>
                 <div className="row">
                     <img src={CSS_img} alt="" />
