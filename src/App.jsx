@@ -4,7 +4,7 @@ import Bio from './components/bio.jsx'
 import Navbar from './components/navbar.jsx'
 import Tecnologias from './components/tecnologias.jsx'
 
-import "intersection-observer";
+import { Fade } from "react-awesome-reveal";
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
           <div id='titulo-linguagens'>
             <h1>- Tecnologias -</h1>
           </div>
-
+          
           <Tecnologias />
           
         </div>

@@ -5,11 +5,15 @@
     @include mixins.FlexRow
     .card 
         @include mixins.Card
+        @include mixins.FlexRow
         width: 90%
         height: 25vh
         transition: .3s ease-in-out
         &:hover
             scale: 105%
+        img
+            height: 60%
 
 #wrapperTech
+    padding: 0
     width: 100%

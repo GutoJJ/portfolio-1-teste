@@ -17,7 +17,7 @@ function NavBarClick() {
     setTimeout(() => {
       document.querySelector('nav').style = "";
       document.querySelector('.text').style = "";
-    }, 500);
+    }, 490);
     
     aux = 0;
   }
@@ -30,9 +30,9 @@ function navbar() {
       <div className="text">
 
         <Fade cascade>
-          <a href="#" onClick={NavBarClick}>Sobre mim</a>
-          <a href="#titulo-linguagens" onClick={NavBarClick}>Tecnologias</a>
-          <a href="" onClick={NavBarClick}>Formação</a>
+          <a className="btn" href="#" onClick={NavBarClick}>Sobre mim</a>
+          <a className="btn"href="#titulo-linguagens" onClick={NavBarClick}>Tecnologias</a>
+          <a className="btn"href="" onClick={NavBarClick}>Formação</a>
         </Fade>
 
       </div>

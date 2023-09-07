@@ -28,7 +28,7 @@
     justify-content: flex-start
     background: variables.$bg
     width: 100%
-    min-height: 100vh
+    min-height: 200vh
     padding-bottom: 5vh
     background-position: center
 
@@ -71,7 +71,7 @@ h1,p,h2,img,a
 @media(max-width: 780px)
     #titulo-linguagens
         h1
-            font-size: 40px
+            font-size: 30px
     .container
         width: 90%
         padding-top: 2.5vh
@@ -100,6 +100,49 @@ h1,p,h2,img,a
             margin-left: 15px
             flex: 1
             font-size: 32px
+    .text
+        display: none
+        visibility: hidden 
+        position: absolute
+        @include mixins.FlexColumn
+        justify-content: flex-start
+        align-items: flex-start
+        width: 100%
+        height: 95vh
+        top: 50px
+        background: #252c34b3
+        backdrop-filter: blur(55px)
+        a
+            height: 50vh
+            font-size: 32px
+            font-weight: 600
+            text-decoration: none
+            width: fit-content
+    .hamb
+        margin-right: 15px
+        display: block
+    nav
+        padding: 0
+        justify-content: space-between
+        h1
+            margin-left: 15px
+    #tecnologias
+        @include mixins.FlexColumn
+        .card
+            width: 100%
+
+@media (min-width: 780px)
+    .text
+        @include mixins.FlexRow
+        a
+            font-size: 20px
+            font-weight: 600
+            text-decoration: none
+            width: fit-content
+            &:hover
+                text-decoration: underline
+                text-decoration-color: variables.$cor-laranja
+                text-decoration-thickness: 3px
 
 // KEYFRAMES =================================================================
 
